@@ -2,15 +2,18 @@
 @import "animation";
 
 /* Colours */
-$blue: orange;
+$blue: #004892;
+$pink: #ffe7e7;
+$black: #000;
+$white: #fff;
 
 /* Typography */
 
 
 /* Media Query Sizes */
-$mq-large: 1000px;
-$mq-medium: 700px;
-$mq-small: 700px;
+$mq-large: 1200px;
+$mq-medium: 800px;
+$mq-small: 500px;
 
 
 @mixin dropshadow() {
@@ -29,9 +32,63 @@ body {
     @include dropshadow();
     animation: bounce 0.2s ease linear;
 
-    @include mq($mq-large) {
-        background-color: yellow;
-    }
+    // @include mq($mq-large) {
+    //     background-color: $blue;
+    // }
 
 
 }
+
+
+
+/* =========================================
+
+This is the styling for the eyes animation
+
+========================================= */
+
+div.eye {
+    width: 200px;
+    height: 200px;
+    background-color: $white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -100px;
+    overflow: hidden;
+  }
+  
+  div.pupil {
+    width: 50px;
+    height: 50px;
+    background-color: $black;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+  }
+  
+  section div.eyelid {
+    background-color: $pink;
+    height: 200px;
+    width: 200px;
+    margin-top: -200px;
+    z-index: -1;
+  }
+  
+  section div.eyelid.animated {	
+      -webkit-animation: blink 0.4s ease-in-out;	
+              animation: blink 0.4s ease-in-out;	
+    }  	
+  
+  div.eye1 {
+      margin-left: -225px;
+  }
+  
+  div.eye2 {
+    margin-left: 25px;
+  }
