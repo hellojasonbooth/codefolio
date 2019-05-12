@@ -31,7 +31,6 @@ body {
     background-color: $blue;
     font-family: Formular;
     @include dropshadow();
-    animation: bounce 0.2s ease linear;
 
     // @include mq($mq-large) {
     //     background-color: $blue;
