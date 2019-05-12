@@ -1,0 +1,36 @@
+@import "reset";
+@import "animation";
+
+/* Colours */
+$blue: blue;
+
+/* Typography */
+
+
+/* Media Query Sizes */
+$mq-large: 1000px;
+$mq-medium: 700px;
+$mq-small: 500px;
+
+
+@mixin dropshadow() {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@mixin mq($width) {
+    @media (max-width: $width) {
+        @content;
+    }
+}
+
+
+body {
+    background-color: $blue;
+    @include dropshadow();
+
+    @include mq($mq-large) {
+        background-color: yellow;
+    }
+
+
+}
