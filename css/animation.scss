@@ -3,9 +3,9 @@
 
 @keyframes bounce {
     0% {
-
+        transform: translate(100px);
     }
     100% {
-        
+        transform: translateY(0px); 
     }
 }

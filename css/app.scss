@@ -2,7 +2,7 @@
 @import "animation";
 
 /* Colours */
-$blue: blue;
+$blue: orange;
 
 /* Typography */
 
@@ -10,7 +10,7 @@ $blue: blue;
 /* Media Query Sizes */
 $mq-large: 1000px;
 $mq-medium: 700px;
-$mq-small: 500px;
+$mq-small: 700px;
 
 
 @mixin dropshadow() {
@@ -27,6 +27,7 @@ $mq-small: 500px;
 body {
     background-color: $blue;
     @include dropshadow();
+    animation: bounce 0.2s ease linear;
 
     @include mq($mq-large) {
         background-color: yellow;
