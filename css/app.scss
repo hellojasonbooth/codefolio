@@ -29,6 +29,7 @@ $mq-small: 500px;
 
 body {
     background-color: $blue;
+    font-family: Formular;
     @include dropshadow();
     animation: bounce 0.2s ease linear;
 
